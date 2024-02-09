@@ -1,0 +1,18 @@
+# github.com/buraksezer/consistent v0.10.0
+## explicit; go 1.9
+github.com/buraksezer/consistent
+# github.com/cespare/xxhash v1.1.0
+## explicit
+github.com/cespare/xxhash
+# github.com/go-echarts/go-echarts/v2 v2.3.3
+## explicit; go 1.18
+github.com/go-echarts/go-echarts/v2/actions
+github.com/go-echarts/go-echarts/v2/charts
+github.com/go-echarts/go-echarts/v2/datasets
+github.com/go-echarts/go-echarts/v2/opts
+github.com/go-echarts/go-echarts/v2/render
+github.com/go-echarts/go-echarts/v2/templates
+github.com/go-echarts/go-echarts/v2/types
+# github.com/mirokuratczyk/consistent v0.0.0-20240209210432-0137441b9535
+## explicit; go 1.9
+github.com/mirokuratczyk/consistent
