@@ -45,6 +45,8 @@ func main() {
 	}
 }
 
+// TODO: add these metrics
+// - #/% keys not distributed
 func eval(impl consistentHashingImplementation) {
 
 	runs := make([]*run, 0)
