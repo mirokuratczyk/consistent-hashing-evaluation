@@ -62,7 +62,7 @@ func eval(impl consistentHashingImplementation) {
 		c.Add(member)
 	}
 
-	keyCount := 1000000
+	keyCount := 100
 	// load := (c.AverageLoad() * float64(keyCount)) / float64(cfg.PartitionCount)
 	// fmt.Println("Maximum key count for a member should be around this: ", math.Ceil(load))
 
@@ -97,7 +97,7 @@ func eval(impl consistentHashingImplementation) {
 
 	// Test deterministic relocation %
 
-	for numNewMembers := 0; numNewMembers < 10; numNewMembers++ {
+	for numNewMembers := 0; numNewMembers < 20; numNewMembers++ {
 
 		member := intf.Member(fmt.Sprintf("node%d.olricmq.new", numNewMembers))
 		c.Add(member)
@@ -124,7 +124,7 @@ func eval(impl consistentHashingImplementation) {
 		}
 
 		relocationPercentage := 100 * float64(changed) / float64(keyCount)
-		fmt.Printf("\n%.2f%% of the keys are relocated when %d new members are added\n", relocationPercentage, numNewMembers+1)
+		fmt.Printf("\n%s: %.2f%% of the %d/%d keys are relocated when %d new members are added\n",  impl.name, relocationPercentage, changed, keyCount, numNewMembers+1)
 
 		runs = append(runs, &run{
 			numKeys:              keyCount,
